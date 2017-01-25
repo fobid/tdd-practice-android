@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TDDPractice</string>
+    <string name="id_error">아이디를 입력하세요</string>
+    <string name="password_error">패스워드를 입력하세요</string>
 </resources>

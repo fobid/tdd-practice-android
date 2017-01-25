@@ -30,16 +30,22 @@ ext {
     dagger = '2.8'
     butterknife = '8.5.1'
     rx = '1.2.5'
+    rxLifecycle = '1.0'
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    compile 'org.mockito:mockito-all:2.0.2-beta'
 //    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
 //        exclude group: 'com.android.support', module: 'support-annotations'
+//        exclude group: 'javax.annottation', module: 'jsr305'
 //    })
+    testCompile 'junit:junit:4.12'
+
+    // support
     compile "com.android.support:appcompat-v7:${support}"
     compile "com.android.support:design:${support}"
-//    testCompile 'junit:junit:4.12'
 
     // dagger2
     compile "com.google.dagger:dagger:${dagger}"
@@ -51,13 +57,14 @@ dependencies {
 
     // Rx
     compile "io.reactivex:rxjava:${rx}"
-    compile "io.reactivex:rxandroid:1.2.1"
+
+    // RxAndroid
+    compile 'io.reactivex:rxandroid:1.2.1'
 
     // RxBinding
     compile 'com.jakewharton.rxbinding:rxbinding:1.0.0'
 
     // RxLifecycle
-    compile 'com.trello:rxlifecycle:1.0'
-//    compile 'com.trello:rxlifecycle-android:1.0'
-    compile 'com.trello:rxlifecycle-components:1.0'
+    compile "com.trello:rxlifecycle:${rxLifecycle}"
+    compile "com.trello:rxlifecycle-components:${rxLifecycle}"
 }
